@@ -104,6 +104,7 @@ music_playing = False
 while running:
     if music_playing == False:
         background_music.play(-1) # play the background music in a loop
+        background_music.set_volume(0.5)
         music_playing = True
 
     for event in pygame.event.get():
