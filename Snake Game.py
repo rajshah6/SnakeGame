@@ -1,7 +1,7 @@
 '''
 Name: Raj Shah
 Date Modified: August 16, 2023
-Version 1.1.2
+Version 1.2.2
 
 Description: This program is a simple snake game that can be played with the arrow keys. Move the snake around
 and eat apples to grow bigger and obtain a larger score. Make sure not to bump into the snake's body or any of
@@ -21,6 +21,10 @@ CELL_SIZE = 20
 GRID_WIDTH, GRID_HEIGHT = WIDTH // CELL_SIZE, HEIGHT // CELL_SIZE # change width and height proportionate to cell size
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Snake Game")
+
+# Load background music
+background_music = pygame.mixer.Sound("background_music.wav")  
+background_music.play(-1) # play the background music in a loop
 
 # Load sounds
 game_over_sound = pygame.mixer.Sound("game_over.wav")  
